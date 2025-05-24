@@ -23,6 +23,5 @@ jobs:
     runs_on: ubuntu-latest
     steps:
       - name: Printing Custom Message
-        run: |
-          echo ${{inputs.workflow_dispatch}}
+        run: echo  ${{inputs.custom_message}}
         
