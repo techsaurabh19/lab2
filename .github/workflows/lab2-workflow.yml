@@ -1,4 +1,15 @@
 name: Exploring Workflow Dispatch Trigger
+workflow_dispatch:
+  inputs:
+    run_job:
+      type: boolean
+      required: false
+      description: "Run Specific Jobs"
+    custom_message:
+      type: string
+      required: true
+      description: "Enter a custom_message"
+    
 
 on:
   workflow_dispatch:
@@ -8,3 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Exploring Workflow Dispatch Trigger"
+  job2:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Printing Custom Message
+        run: |
+          echo ${{inputs.workflow_dispatch}}
+        
