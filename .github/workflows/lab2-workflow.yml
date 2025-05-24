@@ -11,8 +11,6 @@ on
         required: true
         description: "Enter a custom_message"
       
-
-
 jobs:
   job1:
     runs-on: ubuntu-latest
